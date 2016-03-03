@@ -19,6 +19,13 @@
     // To get started with this tutorial running your own code, simply remove
     // the script tag loading scripts/example.js and start writing code here.
 	
+	// tutorial8.js
+	var data = [
+	  {id: 1, author: "Pete Hunt", text: "This is one comment"},
+	  {id: 2, author: "Jordan Walke", text: "This is *another* comment"}
+	];
+
+	
 	// tutorial4.js
 	var Comment = React.createClass({
 	  render: function() {
@@ -49,12 +56,23 @@
 	  render: function() {
 		return (
 		  <div className="commentForm">
-			Hello, world! I am a CommentForm.
+			This is the comment form bit - really just a div
 		  </div>
 		);
 	  }
 	});
-
+	
+	var GarysCommentList = React.createClass({
+	  render: function() {
+		return (
+		  <div className="GarysCommentList">
+			<Comment author="Gaz one">This is going to come from the data server</Comment>
+			<Comment author="Gaz two">This is *another* comment</Comment>
+		  </div>
+		);
+	  }
+	});
+	
 	// tutorial3.js
 	var CommentBox = React.createClass({
 	  render: function() {
@@ -62,12 +80,13 @@
 		  <div className="commentBox">
 			<h1>Comments</h1>
 			<CommentList />
-			<CommentForm />
+		    <CommentForm />
+			<GarysCommentList/>
 		  </div>
 		);
 	  }
 	});
-	
+
 	ReactDOM.render(
 	  <CommentBox />,
 	  document.getElementById('content')
