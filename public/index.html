@@ -20,7 +20,7 @@
     // the script tag loading scripts/example.js and start writing code here.
 	
 	// tutorial8.js
-	var data = [
+	var jsondata = [
 	  {id: 1, author: "Pete Hunt", text: "This is one comment"},
 	  {id: 2, author: "Jordan Walke", text: "This is *another* comment"}
 	];
@@ -93,7 +93,7 @@
 	});
 
 	ReactDOM.render(
-	  <CommentBox data={data} />,
+	  <CommentBox data={jsondata} />,
 	  document.getElementById('content')
 	);
 
